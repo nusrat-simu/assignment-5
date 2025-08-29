@@ -43,3 +43,30 @@ const callHistoryItems = document.getElementById("callHistoryItems");
                 </div>
             </div>
      `;
+         callHistoryItems.appendChild(div);
+     }
+ };
+
+ document.getElementById("clearHistoryBtn").addEventListener("click", () => {
+     callHistoryItems.innerHTML = "";
+ });
+
+ 
+ let copyCount = 0;
+ const copyCountElement = document.getElementById("copyCount");
+
+ const copyButtons = document.getElementsByClassName("copy-btn");
+
+ for (let i = 0; i < copyButtons.length; i++) {
+    copyButtons[i].addEventListener("click", () => {
+        const card = copyButtons[i].closest(".card");
+        const number = card.getElementsByClassName("service-number")[0].innerText;
+        navigator.clipboard.writeText(number).then(() => {
+            copyCount++;
+            copyCountElement.innerText = copyCount;
+            alert(`নাম্বারটি কপি করা হয়েছে: ${number}`);
+        }).catch(err => {
+            console.error('Failed to copy: ', err);
+        });
+    });
+ };
