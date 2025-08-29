@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Hotline</title>
+            <link rel="icon" type="image/x-icon" href="./assets/logo.png">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+<body class="px-2">
+    <header class="flex justify-between items-center py-2 md:px-4 m-1">
+        <div class="flex items-center gap-2 mb-4 md:mb-0">
+            <img src="./assets/logo.png" alt="logo" class="h-12 w-12 md:h-[50px] md:w-[50px]">
+            <h1 class="text-[#006747] text-lg md:text-xl font-extrabold">Emergency <br> Service</h1>
+        </div>
+
+        <div class="relative">
+            <button id="menuToggle" class="md:hidden p-2 rounded-lg border-none">
+                <i class="ri-menu-line text-2xl"></i>
+            </button>
+
+            <div id="menuItems"
+                class="hidden absolute right-0 top-12 bg-white shadow-md rounded-lg p-4 space-y-3 md:static md:flex md:gap-8 md:shadow-none md:bg-transparent md:p-0 md:space-y-0">
+                <h2
+                    class="flex justify-center items-center gap-2 text-black font-bold cursor-pointer bg-[#41ff6b1a] p-[12px] rounded-[50px]">
+                    <span id="heartBtn">0</span>
+                    <img src="./assets/heart.png" alt="heart" class="h-6 w-6 sm:h-[30px] sm:w-[30px]">
+                </h2>
+                <h2
+                    class="flex justify-center items-center gap-2 text-black font-bold cursor-pointer bg-[#41ff6b1a] p-[12px] rounded-[50px]">
+                    <span id="coinCount">100</span>
+                    <img src="./assets/coin.png" alt="coin" class="h-6 w-6 sm:h-[30px] sm:w-[30px]">
+                </h2>
+                <h2 class="flex justify-center items-center gap-2 text-black font-bold cursor-pointer bg-[#41ff6b1a] p-[12px] rounded-[50px]"
+                    id="copyBtn">
+                    <span id="copyCount">0</span>
+                   
+                </h2>
+            </div>
+        </div>
+    </header>
+
+    
+</body>
+</html>
